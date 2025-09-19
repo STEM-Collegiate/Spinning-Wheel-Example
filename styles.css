@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Minimal styles for functionality */
+body {
+    font-family: system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+
+#stageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#stage {
+    position: relative;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+}
+
+.item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 50%;
+    background-color: red;
+}
