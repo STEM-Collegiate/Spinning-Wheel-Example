@@ -1,10 +1,10 @@
 $(document).ready(function () {
     const $stage = $('#stage');
-    const ITEM_SIZE = 15; // px
+    const ITEM_SIZE = 50; // px
     let angleDeg = 0;
     let lastTime = performance.now();
-    const speed = 30;
-    let elements = 30;
+    const speed = -30;
+    let elements = 10;
     const radius = 200;
 
     function renderItems() {
@@ -13,8 +13,8 @@ $(document).ready(function () {
         $stage.empty();
         for (let i = 0; i < n; i++) {
             const baseAngle = (i / n) * 360;
-            const $d = $('<div>', { class: 'item' }).css({
-                transform: `translate(-50%, -50%) rotate(${baseAngle}deg) translateX(${r}px)`,
+            const $d = $('<img>', { class: 'item', src: 'smile.jpg' }).css({
+                transform: `translate(-50%, -50%) rotate(${baseAngle}deg) translateX(${r}px) rotate(90deg)`,
                 height: ITEM_SIZE,
                 width: ITEM_SIZE
             });
